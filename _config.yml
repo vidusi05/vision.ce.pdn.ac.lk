@@ -1,0 +1,37 @@
+# Site settings
+title: "University of Peradeniya : Computer Vision Research Group"
+description: "We are a research group consisting of faculty, students and external collaborators trying to push the boundaries of computer vision theory and applications."
+baseurl: ""
+url: "https://vision.ce.pdn.ac.lk"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Exclude files
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"

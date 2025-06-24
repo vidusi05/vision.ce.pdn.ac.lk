@@ -1,0 +1,86 @@
+---
+layout: default
+title: "Guidelines - Computer Vision Research Group"
+---
+
+<div class="topbar">
+    <h2>Guidelines to update the website</h2>
+</div>
+<hr>
+
+<div class="center">
+    <img class="img" src="{{ '/assets/img/crest.png' | relative_url }}" alt="" />
+    <h1>Department of Computer Engineering</h1>
+    <h2>University of Peradeniya</h2> 
+    <h2 style="color:#bd5d38">Computer Vision Research Group</h2>
+    <h3>Guidelines</h3>
+    
+    <table class="box">
+        <tr>
+            <td>
+                <b><a href="https://docs.google.com/document/d/1ylBOhbJkbSCePaxVaHHub6FondX1hWNaj5pnnlLqdr4/edit?usp=sharing" style="color: white;">Guidelines to add publications to the site</a></b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b><a href="https://docs.google.com/document/d/1oGqHBySRoLSF7Br4DzHpL2Y-F5mspXWt6arz5NrOVC8/edit?usp=sharing" style="color: white;">Guidelines to add projects to the site</a></b>
+            </td>
+        </tr>
+    </table>
+    
+    <br><br>
+    <p style="text-align: center;">These documents have restricted access to the Faculty of Engineering email accounts.</p>
+</div>
+
+<style>
+body{
+  font-family: inherit;
+}
+.topbar{
+    height: 50px;
+    line-height: 50px;
+    text-align: left;
+}
+.center{
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+.img{
+  height:150px;
+  float: left;
+  padding-right: 10px;
+}
+
+h1,h2{
+  margin-bottom: 6px;
+  margin-top: -6px;
+}
+h3{
+  padding:50px 0px;
+  text-align: center;
+}
+ tr{
+   border: 2px solid #000;
+}
+td{
+  padding:10px;
+}
+.box{
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+        
+  color: white;
+  background-color: #d16c44ce;
+  width: 400px;
+  border-collapse: collapse;
+  padding: 20px;
+  text-align: left;
+}
+</style>
