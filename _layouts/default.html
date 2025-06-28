@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    {% include navbar.html %}
+    {{ content }}
+    {% include footer.html %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Step 1: Wrap characters
+  const textEl = document.getElementById("animated-text");
+  const rawText = textEl.textContent;
+  const text = rawText.trim().replace(/\s+/g, ' '); // normalize all whitespace to single spaces
+  textEl.innerHTML = '';
+
+  for (let char of text) {
+    const span = document.createElement('span');
+    span.className = 'char';
+    span.textContent = char === ' ' ? '\u00A0' : char; // preserve space visually
+    textEl.appendChild(span);
+  }
+
+  // Step 2: Animate with GSAP
+  gsap.registerPlugin(ScrollTrigger);
+
+  const chars = document.querySelectorAll(".char");
+
+  gsap.set(chars, { opacity: 0, y: 40 });
+
+  gsap.to(chars, {
+    scrollTrigger: {
+      trigger: "#animated-text",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    ease: "power3.out",
+    stagger: 0.1,
+  });
+});
+
+</script>
+
+  </body>
+</html>

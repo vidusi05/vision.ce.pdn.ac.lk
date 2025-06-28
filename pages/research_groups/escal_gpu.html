@@ -1,0 +1,87 @@
+---
+layout: research_group
+title: "ESCAL GPU"
+permalink: /research/gpu/
+---
+
+<section class="ftco-section ftco-services bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-2">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-2">About</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center ftco-animate mb-5 pb-5">
+            <h5 class="col-md-10" style=" text-align: justify;">
+                Research Date : Jan. 1, 2015 - Present
+            </h5>
+            <p class="col-md-10" style="text-indent: 60px; text-align: justify;">
+                Welcome to the Embedded Systems and Computer Architecture Lab (ESCAL) GPU Research Center at 
+                the prestigious University of Peradeniya, a venerable institution with a rich academic tradition. 
+                Rooted in pioneering research, our center is dedicated to advancing the frontiers of 
+                High-Performance Computing (HPC) within the realm of GPU technologies, 
+                tailored to the nuances of embedded computer systems.
+            </p>
+            <p class="col-md-10" style="text-indent: 60px; text-align: justify;">
+                At ESCAL GPU Research Center, we are committed to enhancing computational performance by orchestrating 
+                a symphony of innovations spanning the entire computing spectrum. Our dynamic research landscape encompasses 
+                a holistic approach, seamlessly interweaving algorithmic refinements and hardware enhancements. 
+                With an unwavering emphasis on achieving accelerated computing prowess, our endeavors encompass diverse domains, 
+                including but not limited to bio-computing, computer security, machine learning, data mining, and physics.
+            </p>
+            <p class="col-md-10" style="text-indent: 60px; text-align: justify;">
+                Anchored within the Department of Computer Engineering, our center operates as an integral part of the 
+                NVIDIA Research Center at the University of Peradeniya. Collaborating with the global expertise of NVIDIA GPUs, 
+                we harness their immense capabilities to propel high-performance computing to unprecedented heights.
+            </p>
+            <p class="col-md-10" style="text-indent: 60px; text-align: justify;">
+                As trailblazers in GPU Computing, our mission echoes the ethos of innovation, collaboration, and excellence. 
+                We invite you to explore our NVIDIA Research Center's insights and accomplishments, accessible through our official 
+                website <a href="http://tesla.ce.pdn.ac.lk/">here</a>. Join us on this transformative journey as we redefine the boundaries of 
+                computation and unlock new vistas of embedded system performance.
+</p>
+</section>
+
+<section class="ftco-section ftco-services">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+                <h2 class="mb-2">Publications</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center ftco-animate mb-5 pb-5">
+            {% for publication in site.data.gpu_pubs %}
+                <div class="col-md-10 publication-template">
+                    <div class="publication-thumbnail">
+                        <a href="{{ publication.doi }}" class="publication-thumbnail-link">
+                            <img src="../../assets/images/pdf-red.png" class="publication-thumbnail-image img-responsive">
+                        </a>
+                    </div>
+                    <div class="publication-info">
+                        <p class="publication-title">{{ publication.title }}</p>
+                        <p style="font-size: smaller;">
+                            {% for author in publication.author_info %}
+                                <a href="{{ author.profile }}">{{ author.name }}</a>{% if forloop.last %}{% else %}, {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p class="publication-stats">
+                            <span class="publication-venue">{{ publication.venue }}</span>
+                        </p>
+                        <p class="publication-keywords hidden-xs">
+                            keywords:
+                            <span class="publication-keyword">
+                                <span class="publication-keyword-text">
+                                    {{ publication.tags | join: ', ' }}
+                                </span>
+                            </span>
+                        </p>
+                        <p class="pub-download-links">
+                            <a href="{{ publication.pdf }}">PDF</a>
+                            • <a href="{{ publication.doi }}">DOI</a>
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
