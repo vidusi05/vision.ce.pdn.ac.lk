@@ -1,6 +1,6 @@
 
 # url: "https://cepdnaclk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: ""  # if deploying at root
+baseurl: "/pages"  # if deploying at root
 url: "https://vidusi05.github.io"
 title: "VISION" # the name of your site, e.g. ACME Corp.
 
