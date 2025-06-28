@@ -6,6 +6,7 @@ baseurl: "/vision.ce.pdn.ac.lk"
 url: "https://vidusi05.github.io/vision.ce.pdn.ac.lk"
 title: "VISION" # the name of your site, e.g. ACME Corp.
 
+
 # include: ['_pages']
 
 plugins:
