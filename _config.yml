@@ -1,8 +1,11 @@
 
 # url: "https://cepdnaclk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+# baseurl: "/vision_dev"  # if deploying at root
+# url: "https://akilax0.xyz/vision_dev/"
 baseurl: "/vision.ce.pdn.ac.lk"  
 url: "https://vidusi05.github.io/vision.ce.pdn.ac.lk"
-title: "VISION" 
+title: "VISION" # the name of your site, e.g. ACME Corp.
+
 
 # include: ['_pages']
 
